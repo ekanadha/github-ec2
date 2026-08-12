@@ -26,7 +26,7 @@ data "aws_vpc" "default" {
 
 # Security Group
 resource "aws_security_group" "apache_sg" {
-  name        = "apache-sg"
+  name        = "apache-01"
   description = "Allow SSH and HTTP"
   vpc_id      = data.aws_vpc.default.id
 
