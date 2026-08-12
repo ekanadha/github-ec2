@@ -61,6 +61,10 @@ data "aws_vpc" "default" {
 #   }
 # }
 
+data "aws_security_group" "apache_sg" {
+  name = "apache-01"
+}
+
 # EC2 Instance
 resource "aws_instance" "apache" {
   ami           = data.aws_ssm_parameter.amazon_linux.value
@@ -72,7 +76,7 @@ resource "aws_instance" "apache" {
   key_name = "AWS"
 
   vpc_security_group_ids = [
-    data.aws_security_group.apache-01.id
+    data.aws_security_group.apache-sg.id
   ]
 
   user_data = <<-EOF
