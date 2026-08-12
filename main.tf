@@ -64,7 +64,7 @@ resource "aws_security_group" "apache_sg" {
 # EC2 Instance
 resource "aws_instance" "apache" {
   ami           = data.aws_ssm_parameter.amazon_linux.value
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   # IMPORTANT:
   # This must be the EC2 Key Pair NAME in AWS.
