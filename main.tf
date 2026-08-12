@@ -69,7 +69,7 @@ resource "aws_instance" "apache" {
   # IMPORTANT:
   # This must be the EC2 Key Pair NAME in AWS.
   # Do NOT put the .pem filename here.
-  key_name = "demo"
+  key_name = "AWS"
 
   vpc_security_group_ids = [
     aws_security_group.apache_sg.id
