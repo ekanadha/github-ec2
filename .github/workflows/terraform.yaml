@@ -41,4 +41,4 @@ jobs:
         run: terraform plan -var="ami_id=${{ vars.AMI_ID }}"
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -var="ami_id=${{ vars.AMI_ID }}"
+        run: terraform apply -auto-approve 
