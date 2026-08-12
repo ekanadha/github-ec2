@@ -12,7 +12,8 @@ permissions:
   contents: read
 
 jobs:
-
+  deploy:
+    uses: ./.github/workflows/static.yml
   terraform:
     runs-on: ubuntu-latest
 
@@ -43,4 +44,5 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve 
 
+    
     

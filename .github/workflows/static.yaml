@@ -1,6 +1,8 @@
 name: Deploy Static App
 
 on:
+  workflow_call:
+    
   push:
     branches:
       - master
