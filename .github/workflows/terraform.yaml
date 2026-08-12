@@ -40,10 +40,11 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -var="ami_id=${{ vars.AMI_ID }}"
 
-      - name: Terraform Apply
+      - name: Terraf Applyorm
         run: terraform apply -auto-approve 
 
   deploy:
+    needs: terraform
     uses: ./.github/workflows/static.yaml      
 
     
