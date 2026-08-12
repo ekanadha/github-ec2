@@ -72,7 +72,7 @@ resource "aws_instance" "apache" {
   key_name = "AWS"
 
   vpc_security_group_ids = [
-    aws_security_group.apache_sg.id
+    data.aws_security_group.apache-01.id
   ]
 
   user_data = <<-EOF
