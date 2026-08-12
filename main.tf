@@ -13,9 +13,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-provider "aws" {
-  region = "ap-south-1"
-}
 
 # Get the latest Amazon Linux 2023 AMI
 data "aws_ssm_parameter" "amazon_linux" {
